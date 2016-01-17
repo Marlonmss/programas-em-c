@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void souumafuncao();
+
+int main()
+{
+    int n;
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &n);
+    int i;
+    for(i=1; i<=n; i++)
+    {
+        printf("Estou realizando loop %d.\n", i);
+        souumafuncao();
+    }
+    system("pause");
+    return 0;
+}
+
+void souumafuncao()
+{
+    printf("Sou uma funcao.\n");
+}
