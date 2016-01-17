@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void maior(int* p, int* q);
+
+int main()
+{
+    int n = 3, v[n][n];
+
+    int i, j;
+    for(i=0; i<n; i++)
+        for(j=0; j<n; j++)
+        {
+            printf("Digite um valor: ");
+            scanf("%d", &v[i][j]);
+        }
+
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+           printf("%d  ", v[i][j]);
+        printf("\n");
+    }
+
+    int a = 3, b = 4;
+    maior(&a,&b);
+
+    printf("Letra a: %d\n", a);
+    printf("Letra b: %d\n", b);
+
+    double* z = &a;
+    printf("O conteudo indica pelo ponteiro z: %d", *z);
+
+    system("pause");
+    return 0;
+}
+
+void maior(int* p, int* q)
+{
+    if(*p<*q)
+    {
+        int temp = *p;
+        *p = *q;
+        *q = temp;
+    }
+}
+
+void nove(int* p)
+{
+    *p = 9;
+}
